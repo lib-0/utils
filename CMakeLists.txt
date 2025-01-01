@@ -17,13 +17,23 @@ set_target_properties(G_0_utils_static PROPERTIES
 
 add_library(G_0_utils_shared SHARED ${SOURCES})
 set_target_properties(G_0_utils_shared PROPERTIES
-    OUTPUT_NAME "-0_utils"
-    VERSION ${PROJECT_VERSION}
-    SOVERSION ${PROJECT_VERSION_MAJOR}
+  OUTPUT_NAME "-0_utils"
+  VERSION ${PROJECT_VERSION}
+  SOVERSION ${PROJECT_VERSION_MAJOR}
 )
 
-target_include_directories(G_0_utils_static PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_include_directories(G_0_utils_shared PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(G_0_utils_static
+  PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+  PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/external_include
+)
+target_include_directories(G_0_utils_shared
+  PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+  PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/external_include
+)
 
 install(TARGETS G_0_utils_static G_0_utils_shared
   ARCHIVE DESTINATION lib
