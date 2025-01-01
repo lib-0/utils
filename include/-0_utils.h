@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 
-#include "-0_debug.h"
+#include "-0/debug.h"
 
 void g_0_bzero(G_0_DEBUG_FUNCTION_PARAMETER_PRELUDE void *ptr, size_t size);
 void *g_0_memdup(G_0_DEBUG_FUNCTION_PARAMETER_PRELUDE void *ptr, size_t size);

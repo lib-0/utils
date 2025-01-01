@@ -4,8 +4,8 @@
 
 #include "-0_debug.h"
 
-void g_0_assert(G_0_DEBUG_FUNCTION_PARAMETER_PRELUDE bool condition) {
-  G_0_DEBUG_FUNCTION_BODY_PRELUDE;
+void g_0_assert(G_P bool condition) {
+  G_B;
   if (!condition) {
     abort();
   }

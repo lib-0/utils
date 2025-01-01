@@ -5,7 +5,7 @@
 
 #include "-0_debug.h"
 
-void g_0_bzero(G_0_DEBUG_FUNCTION_PARAMETER_PRELUDE void *ptr, size_t size) {
-  G_0_DEBUG_FUNCTION_BODY_PRELUDE;
+void g_0_bzero(G_P void *ptr, size_t size) {
+  G_B;
   memset(ptr, 0, size);
 }
