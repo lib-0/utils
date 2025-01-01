@@ -3,8 +3,10 @@ cmake_minimum_required(VERSION 3.0)
 project(G_0_utils VERSION 1.0 LANGUAGES C)
 
 set(SOURCES
+  src/assert.c
   src/bzero.c
   src/memdup.c
+  src/nonnull.c
 )
 
 add_library(G_0_utils_static STATIC ${SOURCES})
