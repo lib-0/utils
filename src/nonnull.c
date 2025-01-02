@@ -1,9 +1,12 @@
+#define G_THIS
 #include "-0_utils.h"
+#undef G_THIS
 
-#include "-0_debug.h"
+#define G_THIS
+#include "-0_common.h"
+#undef G_THIS
 
-void *g_0_nonnull(G_P void *ptr) {
-  G_B;
-  g_0_assert(G_A ptr != NULL);
+G_EXPORT void *g_0_nonnull(void *ptr) {
+  g_0_assert(ptr != NULL);
   return ptr;
 }

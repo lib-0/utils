@@ -1,11 +1,14 @@
+#define G_THIS
 #include "-0_utils.h"
+#undef G_THIS
 
 #include <stdlib.h>
 
-#include "-0_debug.h"
+#define G_THIS
+#include "-0_common.h"
+#undef G_THIS
 
-void g_0_assert(G_P bool condition) {
-  G_B;
+G_EXPORT void g_0_assert(bool condition) {
   if (!condition) {
     abort();
   }

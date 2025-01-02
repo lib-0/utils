@@ -1,11 +1,12 @@
+#define G_THIS
 #include "-0_utils.h"
+#undef G_THIS
 
 #include <stddef.h>
 #include <string.h>
 
-#include "-0_debug.h"
+#define G_THIS
+#include "-0_common.h"
+#undef G_THIS
 
-void g_0_bzero(G_P void *ptr, size_t size) {
-  G_B;
-  memset(ptr, 0, size);
-}
+G_EXPORT void g_0_bzero(void *ptr, size_t size) { memset(ptr, 0, size); }
