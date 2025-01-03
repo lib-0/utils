@@ -1,14 +1,12 @@
-#define G_THIS
+#define G_EXPORT
 #include "-0_utils.h"
-#undef G_THIS
+#undef G_EXPORT
 
 #include <stdlib.h>
 
-#define G_THIS
-#include "-0_common.h"
-#undef G_THIS
+#include "-0/common_export.h"
 
-G_EXPORT void g_0_assert(bool condition) {
+G_API void g_0_assert(bool condition) {
   if (!condition) {
     abort();
   }

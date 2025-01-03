@@ -1,12 +1,10 @@
-#define G_THIS
+#define G_EXPORT
 #include "-0_utils.h"
-#undef G_THIS
+#undef G_EXPORT
 
-#define G_THIS
-#include "-0_common.h"
-#undef G_THIS
+#include "-0/common_export.h"
 
-G_EXPORT void *g_0_nonnull(void *ptr) {
+G_API void *g_0_nonnull(void *ptr) {
   g_0_assert(ptr != NULL);
   return ptr;
 }

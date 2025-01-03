@@ -1,12 +1,10 @@
-#define G_THIS
+#define G_EXPORT
 #include "-0_utils.h"
-#undef G_THIS
+#undef G_EXPORT
 
 #include <stddef.h>
 #include <string.h>
 
-#define G_THIS
-#include "-0_common.h"
-#undef G_THIS
+#include "-0/common_export.h"
 
-G_EXPORT void g_0_bzero(void *ptr, size_t size) { memset(ptr, 0, size); }
+G_API void g_0_bzero(void *ptr, size_t size) { memset(ptr, 0, size); }

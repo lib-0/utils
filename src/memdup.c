@@ -1,15 +1,13 @@
-#define G_THIS
+#define G_EXPORT
 #include "-0_utils.h"
-#undef G_THIS
+#undef G_EXPORT
 
 #include <stdlib.h>
 #include <string.h>
 
-#define G_THIS
-#include "-0_common.h"
-#undef G_THIS
+#include "-0/common_export.h"
 
-G_EXPORT void *g_0_memdup(void *ptr, size_t size) {
+G_API void *g_0_memdup(void *ptr, size_t size) {
   void *const result = malloc(size);
   if (result) {
     memcpy(result, ptr, size);
