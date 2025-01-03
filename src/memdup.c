@@ -1,14 +1,11 @@
-#define G_EXPORT
 #include "-0_utils.h"
-#undef G_EXPORT
 
-#include <stdlib.h>
 #include <string.h>
 
-#include "-0/common_export.h"
+#include "-0_allocator.h"
 
-G_API void *g_0_memdup(void *ptr, size_t size) {
-  void *const result = malloc(size);
+void *g_memdup(g_allocator_t *allocator, void *ptr, size_t size) {
+  void *const result = g_alloc(allocator, size);
   if (result) {
     memcpy(result, ptr, size);
   }
