@@ -37,3 +37,11 @@ install(
   DESTINATION
     include
 )
+
+install(
+  FILES
+    include/-0/utils.h
+    include/-0/utils_shortcut.h
+  DESTINATION
+    include/-0
+)
