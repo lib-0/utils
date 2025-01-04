@@ -9,19 +9,19 @@ set(SOURCES
   src/nonnull.c
 )
 
-add_library(G_0_utils_static STATIC ${SOURCES})
-set_target_properties(G_0_utils_static PROPERTIES
+add_library(G_0_utils STATIC ${SOURCES})
+set_target_properties(G_0_utils PROPERTIES
   OUTPUT_NAME "-0_utils"
 )
 
-target_include_directories(G_0_utils_static
+target_include_directories(G_0_utils
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
   PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/external_include
 )
 
-install(TARGETS G_0_utils_static
+install(TARGETS G_0_utils
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
